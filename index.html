@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nude Universe</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="MobileOptimized" content="320">
+    <!--Start Style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugins/swiper/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/plugins/scroll/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- JavaScript -->
+
+
+    <!-- Favicon Link -->
+
+
+
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body>
+    <!----Loader Start---->
+    <div class="ms_loader">
+        <div class="wrap">
+            <img src="assets/images/loader.gif" alt="loader">
+        </div>
+    </div>
+    <!----Main Wrapper Start---->
+    <div class="ms_main_wrapper">
+        <!---Side Menu Start--->
+        <div class="ms_sidemenu_wrapper">
+            <div class="ms_nav_close ms_cmenu_toggle">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+            <div class="ms_sidemenu_inner">
+                <div class="ms_logo_inner">
+                    <div class="ms_logo">
+                        <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="img-fluid" /></a>
+                    </div>
+                    <div class="ms_logo_mini">
+                        <a href="index.html"><img src="assets/images/mini_logo.png" alt="mini_logo"
+                                class="img-fluid" /></a>
+                    </div>
+                </div>
+                <div class="ms_nav_wrapper">
+                    <h4 class="nav_heading">Browse Leaks</h4>
+                    <ul>
+                        <li>
+                            <a href="index.html" class="active" title="Leaks">
+                                <span class="nav_icon">
+                                    <span class="icon icon_favourite"></span>
+                                </span>
+                                <span class="nav_text">
+                                    Leaks
+                                </span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                    <h4 class="nav_heading">Settings</h4>
+                    <ul class="nav_downloads">
+                        <li><a href="javascript:;" title="Downloads" onclick="openDCMAModal()">
+                                <span class="nav_icon">
+                                    <span class="icon icon_logout"></span>
+                                </span>
+                                <span class="nav_text">
+                                    DCMA
+                                </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!---Main Content Start--->
+        <div class="ms_content_wrapper padder_top8">
+            <!---Header--->
+            <div class="ms_header">
+                <div class="ms_header_inner">
+                    <div class="ms_top_left">
+                        <div class="ms_top_search">
+                            <input type="text" class="form-control" id="searchInput" placeholder="Search for Leaks...">
+                            <span class="search_icon">
+                                <img src="assets/images/svg/search.svg" alt="search">
+                            </span>
+                        </div>
+
+                        <div class="ms_noti_wrap">
+                            <a href="javascript:;" class="ms_btn " data-toggle="modal"
+                                data-target="#myModal"><span>Upload Leak</span></a>
+                        </div>
+                    </div>
+                    <div class="ms_top_right">
+                        <div id="banner1">
+                            <!-- Banner Ad -->
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!---Artist page--->
+            <div class="ms_artist_wrapper common_pages_space">
+                <div class="ms_artist_inner">
+                    <!-- Todays -->
+                    <div class="ms_artist_slider top_album_slider">
+                        <div class="slider_heading_wrap">
+                            <div class="slider_cheading">
+                                <h4 class="cheading_title" id="today_leaks">Todays Leaks&nbsp;</h4>
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="slider_cmn_controls">
+                                <div class="slider_cmn_nav "><span class="swiper-button-next1 slider_nav_next"></span>
+                                </div>
+                                <div class="slider_cmn_nav"><span class="swiper-button-prev1 slider_nav_prev"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ms_artist_innerslider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- All others -->
+                    <div class="slider_heading_wrap">
+                        <div class="slider_cheading">
+                            <h4 class="cheading_title" id="all_leaks">All Leaks&nbsp;</h4>
+                        </div>
+                    </div>
+                    <div class="recommended_album_slider">
+                        <div class="ms_artist_innerslider2" style="position: relative;">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper2" id="searchResults">
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DCMA Modal -->
+            <div class="modal" id="dcmaModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>DMCA Notice</h2>
+                    <p id="dcmaMessage"></p>
+                    <a href="mailto:123@123.com" id="dcmaEmail">Contact Us</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <script type="module" src="/assets/js/main.js"></script>
+
+    <!--Main js file Style-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="assets/js/modal.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/swiper/js/swiper.min.js"></script>
+    <script src="assets/js/plugins/scroll/jquery.mCustomScrollbar.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>
